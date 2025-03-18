@@ -3,10 +3,10 @@ pipeline{
   agent any
   
   stages{
-    stage{
-      steps{
-        gitclone('master', 'git-credentials', 'https://github.com/pasem21/demo-java.git')
+      stage('git checkout'){
+          steps{
+            gitclone('master', 'git-credentials', 'https://github.com/pasem21/demo-java.git')
+        }
       }
     }
-  }
 }
